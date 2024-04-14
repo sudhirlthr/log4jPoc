@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Here we can keep debug, trace, info, warn, error and fatal-->
+
+        <!-- trace: it will log everything whether its a log type warn, error, trace, info, warn and fatal-->
+        <!--<Logger name="io.sudhir.log" level="trace" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>-->
+
+        <!-- debug: it will log info, debug, warn, error, fatal-->
+        <!--<Logger name="io.sudhir.log" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>-->
+
+        <!-- info: it will log info, warn, error, fatal-->
+        <!--<Logger name="io.sudhir.log" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>-->
+
+        <!-- warn: it will log warn, error, fatal-->
+        <!--<Logger name="io.sudhir.log" level="warn" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>-->
+
+        <!-- error: it will log error, fatal-->
+        <!--<Logger name="io.sudhir.log" level="error" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>-->
+
+        <!-- fatal: it will log only fatal-->
+        <Logger name="io.sudhir.log" level="fatal" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Root level="error">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
